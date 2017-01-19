@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Header = exports.Article = undefined;
 
 var _article = require('./article');
 
@@ -14,7 +15,5 @@ var _header2 = _interopRequireDefault(_header);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = {
-  Article: _article2.default,
-  Header: _header2.default
-};
+exports.Article = _article2.default;
+exports.Header = _header2.default;

@@ -1,7 +1,7 @@
 import Article from './article';
 import Header from './header';
 
-export default {
+export {
   Article,
   Header,
 };
