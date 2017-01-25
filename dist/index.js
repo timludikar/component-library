@@ -59,23 +59,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.deprecated = exports.Header = exports.Article = undefined;
+	exports.deprecated = exports.Header = exports.Aside = exports.Article = undefined;
 
 	var _article = __webpack_require__(1);
 
 	var _article2 = _interopRequireDefault(_article);
 
-	var _header = __webpack_require__(71);
+	var _aside = __webpack_require__(71);
+
+	var _aside2 = _interopRequireDefault(_aside);
+
+	var _header = __webpack_require__(72);
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _deprecated = __webpack_require__(72);
+	var _deprecated = __webpack_require__(73);
 
 	var _deprecated2 = _interopRequireDefault(_deprecated);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.Article = _article2.default;
+	exports.Aside = _aside2.default;
 	exports.Header = _header2.default;
 	exports.deprecated = _deprecated2.default;
 
@@ -4735,6 +4740,55 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var asideStyles = {
+	  border: '1px solid #eee',
+	  borderRadius: 3,
+	  backgroundColor: '#FFFFFF',
+	  cursor: 'pointer',
+	  fontSize: 15,
+	  padding: '3px 10px'
+	};
+
+	var Aside = function Aside(_ref) {
+	  var children = _ref.children,
+	      _ref$style = _ref.style,
+	      style = _ref$style === undefined ? {} : _ref$style;
+	  return _react2.default.createElement(
+	    'aside',
+	    {
+	      style: (0, _extends3.default)({}, asideStyles, style)
+	    },
+	    children
+	  );
+	};
+
+	Aside.propTypes = {
+	  children: _react2.default.PropTypes.node.isRequired,
+	  style: _react2.default.PropTypes.object
+	};
+
+	exports.default = Aside;
+
+/***/ },
+/* 72 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends2 = __webpack_require__(2);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _react = __webpack_require__(40);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	var Header = function Header(_ref) {
 	  var className = _ref.className,
 	      children = _ref.children,
@@ -4759,7 +4813,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Header;
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4769,7 +4823,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.default = deprecated;
 
-	var _warning = __webpack_require__(73);
+	var _warning = __webpack_require__(74);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -4803,7 +4857,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	deprecated._resetWarned = _resetWarned;
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
