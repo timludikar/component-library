@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.deprecated = exports.Header = exports.Aside = exports.Article = undefined;
+	exports.deprecated = exports.Paragraph = exports.Header = exports.Aside = exports.Article = undefined;
 
 	var _article = __webpack_require__(1);
 
@@ -73,7 +73,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _deprecated = __webpack_require__(73);
+	var _paragraph = __webpack_require__(73);
+
+	var _paragraph2 = _interopRequireDefault(_paragraph);
+
+	var _deprecated = __webpack_require__(74);
 
 	var _deprecated2 = _interopRequireDefault(_deprecated);
 
@@ -82,6 +86,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Article = _article2.default;
 	exports.Aside = _aside2.default;
 	exports.Header = _header2.default;
+	exports.Paragraph = _paragraph2.default;
 	exports.deprecated = _deprecated2.default;
 
 /***/ },
@@ -4821,9 +4826,58 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _extends2 = __webpack_require__(2);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _react = __webpack_require__(40);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var articleStyles = {
+	  border: '1px solid #eee',
+	  borderRadius: 3,
+	  backgroundColor: '#FFFFFF',
+	  cursor: 'pointer',
+	  fontSize: 15,
+	  padding: '3px 10px'
+	};
+
+	var Article = function Article(_ref) {
+	  var children = _ref.children,
+	      _ref$style = _ref.style,
+	      style = _ref$style === undefined ? {} : _ref$style;
+	  return _react2.default.createElement(
+	    'article',
+	    {
+	      style: (0, _extends3.default)({}, articleStyles, style)
+	    },
+	    children
+	  );
+	};
+
+	Article.propTypes = {
+	  children: _react2.default.PropTypes.node.isRequired,
+	  style: _react2.default.PropTypes.object
+	};
+
+	exports.default = Article;
+
+/***/ },
+/* 74 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	exports.default = deprecated;
 
-	var _warning = __webpack_require__(74);
+	var _warning = __webpack_require__(75);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -4857,7 +4911,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	deprecated._resetWarned = _resetWarned;
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**

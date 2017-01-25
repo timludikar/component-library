@@ -9,6 +9,7 @@ function loadStories() {
   require('../src/article/stories');
   require('../src/aside/stories');
   require('../src/header/stories');
+  require('../src/paragraph/stories');
 }
 
 configure(loadStories, module);
