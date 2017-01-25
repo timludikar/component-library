@@ -10,7 +10,7 @@ const Header = ({ className, children, style = {}, size = 1 }) => {
 Header.propTypes = {
   className: React.PropTypes.array,
   size: React.PropTypes.number,
-  children: React.PropTypes.string.isRequired,
+  children: React.PropTypes.node.isRequired,
   style: React.PropTypes.object,
 };
 

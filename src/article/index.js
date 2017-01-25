@@ -18,7 +18,7 @@ const Article = ({ children, style = {} }) => (
 );
 
 Article.propTypes = {
-  children: React.PropTypes.string.isRequired,
+  children: React.PropTypes.node.isRequired,
   style: React.PropTypes.object,
 };
 
