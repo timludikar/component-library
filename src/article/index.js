@@ -1,17 +1,10 @@
 import React from 'react';
-
-const articleStyles = {
-  border: '1px solid #eee',
-  borderRadius: 3,
-  backgroundColor: '#FFFFFF',
-  cursor: 'pointer',
-  fontSize: 15,
-  padding: '3px 10px',
-};
+import styles from './stylesheet/article.styl';
 
 const Article = ({ children, style = {} }) => (
   <article
-    style={{ ...articleStyles, ...style }}
+    className={styles.article}
+    style={{ ...style }}
   >
     {children}
   </article>
