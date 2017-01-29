@@ -11,6 +11,7 @@ function loadStories() {
   require('../src/header/stories');
   require('../src/lists/stories');
   require('../src/paragraph/stories');
+  require('../src/section/stories');
 }
 
 configure(loadStories, module);
