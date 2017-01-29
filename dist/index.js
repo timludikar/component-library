@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.deprecated = exports.Paragraph = exports.Header = exports.Aside = exports.Article = undefined;
+	exports.deprecated = exports.Section = exports.Paragraph = exports.Header = exports.Aside = exports.Article = undefined;
 
 	var _article = __webpack_require__(1);
 
@@ -77,7 +77,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _paragraph2 = _interopRequireDefault(_paragraph);
 
-	var _deprecated = __webpack_require__(78);
+	var _section = __webpack_require__(78);
+
+	var _section2 = _interopRequireDefault(_section);
+
+	var _deprecated = __webpack_require__(81);
 
 	var _deprecated2 = _interopRequireDefault(_deprecated);
 
@@ -87,6 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Aside = _aside2.default;
 	exports.Header = _header2.default;
 	exports.Paragraph = _paragraph2.default;
+	exports.Section = _section2.default;
 	exports.deprecated = _deprecated2.default;
 
 /***/ },
@@ -4881,9 +4886,62 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _extends2 = __webpack_require__(2);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _react = __webpack_require__(40);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _section = __webpack_require__(79);
+
+	var _section2 = _interopRequireDefault(_section);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Section = function Section(_ref) {
+	  var children = _ref.children,
+	      _ref$style = _ref.style,
+	      style = _ref$style === undefined ? {} : _ref$style;
+	  return _react2.default.createElement(
+	    'section',
+	    {
+	      className: _section2.default.section,
+	      style: (0, _extends3.default)({}, style)
+	    },
+	    children
+	  );
+	};
+
+	Section.propTypes = {
+	  children: _react2.default.PropTypes.node.isRequired,
+	  style: _react2.default.PropTypes.object
+	};
+
+	exports.default = Section;
+
+/***/ },
+/* 79 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"section":"section__section___27QXM"};
+
+/***/ },
+/* 80 */,
+/* 81 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	exports.default = deprecated;
 
-	var _warning = __webpack_require__(79);
+	var _warning = __webpack_require__(82);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -4917,7 +4975,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	deprecated._resetWarned = _resetWarned;
 
 /***/ },
-/* 79 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
