@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.deprecated = exports.Section = exports.ListItem = exports.OrderedList = exports.UnorderedList = exports.Paragraph = exports.Header = exports.Aside = exports.Article = undefined;
+	exports.deprecated = exports.TopHeader = exports.Section = exports.ListItem = exports.OrderedList = exports.UnorderedList = exports.Paragraph = exports.Header = exports.Aside = exports.Article = undefined;
 
 	var _article = __webpack_require__(1);
 
@@ -83,7 +83,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _section2 = _interopRequireDefault(_section);
 
-	var _deprecated = __webpack_require__(87);
+	var _header3 = __webpack_require__(87);
+
+	var _header4 = _interopRequireDefault(_header3);
+
+	var _deprecated = __webpack_require__(90);
 
 	var _deprecated2 = _interopRequireDefault(_deprecated);
 
@@ -97,6 +101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.OrderedList = _lists.OrderedList;
 	exports.ListItem = _lists.ListItem;
 	exports.Section = _section2.default;
+	exports.TopHeader = _header4.default;
 	exports.deprecated = _deprecated2.default;
 
 /***/ },
@@ -5119,9 +5124,60 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _react = __webpack_require__(40);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _header = __webpack_require__(76);
+
+	var _header2 = _interopRequireDefault(_header);
+
+	var _header3 = __webpack_require__(88);
+
+	var _header4 = _interopRequireDefault(_header3);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var TopHeader = function TopHeader() {
+	  return _react2.default.createElement(
+	    'header',
+	    { className: _header4.default.header, role: 'banner' },
+	    _react2.default.createElement(
+	      _header2.default,
+	      { size: 1, className: [_header4.default.zigzag] },
+	      _react2.default.createElement(
+	        'b',
+	        null,
+	        'Tim'
+	      ),
+	      ' Ludikar'
+	    )
+	  );
+	};
+
+	exports.default = TopHeader;
+
+/***/ },
+/* 88 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"icon":"header__icon___3edxH","twitter":"header__twitter___2eGL9","facebook":"header__facebook___2yTm3","linkedin":"header__linkedin___3-_F8","mail":"header__mail___1PdJY","zigzag":"header__zigzag___200nf","header":"header__header___3InEI"};
+
+/***/ },
+/* 89 */,
+/* 90 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	exports.default = deprecated;
 
-	var _warning = __webpack_require__(88);
+	var _warning = __webpack_require__(91);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -5155,7 +5211,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	deprecated._resetWarned = _resetWarned;
 
 /***/ },
-/* 88 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
