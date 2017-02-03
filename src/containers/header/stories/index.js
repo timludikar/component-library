@@ -4,5 +4,5 @@ import TopHeader from '../index';
 
 storiesOf('container.TopHeader', module)
   .add('default view', () => (
-    <TopHeader/>
+    <TopHeader />
   ));

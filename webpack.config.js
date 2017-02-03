@@ -7,6 +7,9 @@ module.exports = {
     path: './dist',
     libraryTarget: 'umd',
   },
+  stylus: {
+    use: [require('rupture')(), require('jeet')()]
+  },
   module: {
     loaders: [
       {

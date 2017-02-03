@@ -1,6 +1,9 @@
 const path = require('path');
 
 module.exports = {
+  stylus: {
+    use: [require('rupture')(), require('jeet')()]
+  },
   module: {
     loaders: [
       {
