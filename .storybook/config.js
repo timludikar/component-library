@@ -12,6 +12,9 @@ function loadStories() {
   require('../src/components/lists/stories');
   require('../src/components/paragraph/stories');
   require('../src/components/section/stories');
+
+  // Container Elements
+  require('../src/containers/header/stories');
 }
 
 configure(loadStories, module);
