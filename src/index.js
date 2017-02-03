@@ -4,7 +4,7 @@ import Header from './components/header';
 import Paragraph from './components/paragraph';
 import { UnorderedList, OrderedList, ListItem } from './components/lists';
 import Section from './components/section';
-import TopHeader from './containers/header';
+import TopHeader from './containers/topheader';
 import deprecated from './deprecated';
 
 export {
