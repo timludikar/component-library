@@ -1,9 +1,9 @@
-import Article from './article';
-import Aside from './aside';
-import Header from './header';
-import Paragraph from './paragraph';
-import { UnorderedList, OrderedList, ListItem } from './lists';
-import Section from './section';
+import Article from './components/article';
+import Aside from './components/aside';
+import Header from './components/header';
+import Paragraph from './components/paragraph';
+import { UnorderedList, OrderedList, ListItem } from './components/lists';
+import Section from './components/section';
 import deprecated from './deprecated';
 
 export {

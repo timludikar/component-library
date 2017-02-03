@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import Section from '../index';
 
-storiesOf('Section', module)
+storiesOf('component.Section', module)
   .add('default view', () => (
     <Section>Hello</Section>
   ))

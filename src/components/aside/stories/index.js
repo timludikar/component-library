@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import Article from '../index';
+import Aside from '../index';
 
-storiesOf('Article', module)
+storiesOf('component.Aside', module)
   .add('default view', () => (
-    <Article>Hello</Article>
+    <Aside>Hello</Aside>
   ))
   .add('custom styles', () => {
     const style = {
@@ -13,6 +13,6 @@ storiesOf('Article', module)
       color: '#FF8833',
     };
     return (
-      <Article style={style}>Hello</Article>
+      <Aside style={style}>Hello</Aside>
     );
   });

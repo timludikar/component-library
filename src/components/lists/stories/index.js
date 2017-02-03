@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { OrderedList, UnorderedList, ListItem } from '../index';
 
-storiesOf('Lists', module)
+storiesOf('component.Lists', module)
   .add('Unordered List', () => (
     <UnorderedList>
       <ListItem>Hello</ListItem>

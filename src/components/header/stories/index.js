@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import Header from '../index';
 
-storiesOf('Heading', module)
+storiesOf('component.Heading', module)
   .add('H1', () => (
     <Header>Heading 1</Header>
   ))

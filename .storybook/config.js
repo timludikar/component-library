@@ -6,12 +6,12 @@
 import { configure } from '@kadira/storybook';
 
 function loadStories() {
-  require('../src/article/stories');
-  require('../src/aside/stories');
-  require('../src/header/stories');
-  require('../src/lists/stories');
-  require('../src/paragraph/stories');
-  require('../src/section/stories');
+  require('../src/components/article/stories');
+  require('../src/components/aside/stories');
+  require('../src/components/header/stories');
+  require('../src/components/lists/stories');
+  require('../src/components/paragraph/stories');
+  require('../src/components/section/stories');
 }
 
 configure(loadStories, module);
