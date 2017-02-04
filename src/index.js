@@ -6,6 +6,7 @@ import { UnorderedList, OrderedList, ListItem } from './components/lists';
 import Section from './components/section';
 import TopHeader from './containers/topheader';
 import Introduction from './containers/introduction';
+import Achievements from './containers/achievements';
 import deprecated from './deprecated';
 
 export {
@@ -19,5 +20,6 @@ export {
   Section,
   TopHeader,
   Introduction,
+  Achievements,
   deprecated,
 };

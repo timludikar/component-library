@@ -1,9 +1,7 @@
 import React from 'react';
-import styles from './stylesheet/article.styl';
 
 const Article = ({ children, style = {} }) => (
   <article
-    className={styles.article}
     style={{ ...style }}
   >
     {children}

@@ -59,39 +59,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.deprecated = exports.Introduction = exports.TopHeader = exports.Section = exports.ListItem = exports.OrderedList = exports.UnorderedList = exports.Paragraph = exports.Header = exports.Aside = exports.Article = undefined;
+	exports.deprecated = exports.Achievements = exports.Introduction = exports.TopHeader = exports.Section = exports.ListItem = exports.OrderedList = exports.UnorderedList = exports.Paragraph = exports.Header = exports.Aside = exports.Article = undefined;
 
 	var _article = __webpack_require__(1);
 
 	var _article2 = _interopRequireDefault(_article);
 
-	var _aside = __webpack_require__(75);
+	var _aside = __webpack_require__(71);
 
 	var _aside2 = _interopRequireDefault(_aside);
 
-	var _header = __webpack_require__(76);
+	var _header = __webpack_require__(72);
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _paragraph = __webpack_require__(77);
+	var _paragraph = __webpack_require__(73);
 
 	var _paragraph2 = _interopRequireDefault(_paragraph);
 
-	var _lists = __webpack_require__(78);
+	var _lists = __webpack_require__(74);
 
-	var _section = __webpack_require__(84);
+	var _section = __webpack_require__(82);
 
 	var _section2 = _interopRequireDefault(_section);
 
-	var _topheader = __webpack_require__(85);
+	var _topheader = __webpack_require__(83);
 
 	var _topheader2 = _interopRequireDefault(_topheader);
 
-	var _introduction = __webpack_require__(88);
+	var _introduction = __webpack_require__(86);
 
 	var _introduction2 = _interopRequireDefault(_introduction);
 
-	var _deprecated = __webpack_require__(91);
+	var _achievements = __webpack_require__(89);
+
+	var _achievements2 = _interopRequireDefault(_achievements);
+
+	var _deprecated = __webpack_require__(92);
 
 	var _deprecated2 = _interopRequireDefault(_deprecated);
 
@@ -107,6 +111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Section = _section2.default;
 	exports.TopHeader = _topheader2.default;
 	exports.Introduction = _introduction2.default;
+	exports.Achievements = _achievements2.default;
 	exports.deprecated = _deprecated2.default;
 
 /***/ },
@@ -127,10 +132,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _article = __webpack_require__(71);
-
-	var _article2 = _interopRequireDefault(_article);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Article = function Article(_ref) {
@@ -140,7 +141,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return _react2.default.createElement(
 	    'article',
 	    {
-	      className: _article2.default.article,
 	      style: (0, _extends3.default)({}, style)
 	    },
 	    children
@@ -4743,16 +4743,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 71 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-	module.exports = {"article":"article__article____k3-3"};
-
-/***/ },
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4801,7 +4791,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Aside;
 
 /***/ },
-/* 76 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4844,7 +4834,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Header;
 
 /***/ },
-/* 77 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4886,7 +4876,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Paragraph;
 
 /***/ },
-/* 78 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4896,15 +4886,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.ListItem = exports.UnorderedList = exports.OrderedList = undefined;
 
-	var _unorderedlist = __webpack_require__(79);
+	var _unorderedlist = __webpack_require__(75);
 
 	var _unorderedlist2 = _interopRequireDefault(_unorderedlist);
 
-	var _orderedlist = __webpack_require__(83);
+	var _orderedlist = __webpack_require__(81);
 
 	var _orderedlist2 = _interopRequireDefault(_orderedlist);
 
-	var _listitem = __webpack_require__(80);
+	var _listitem = __webpack_require__(76);
 
 	var _listitem2 = _interopRequireDefault(_listitem);
 
@@ -4915,7 +4905,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.ListItem = _listitem2.default;
 
 /***/ },
-/* 79 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4932,11 +4922,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _listitem = __webpack_require__(80);
+	var _listitem = __webpack_require__(76);
 
 	var _listitem2 = _interopRequireDefault(_listitem);
 
-	var _lists = __webpack_require__(81);
+	var _lists = __webpack_require__(77);
 
 	var _lists2 = _interopRequireDefault(_lists);
 
@@ -4964,7 +4954,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = UnorderedList;
 
 /***/ },
-/* 80 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5004,15 +4994,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ListItem;
 
 /***/ },
-/* 81 */
+/* 77 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"ul":"lists__ul___2iWH7","ol":"lists__ol___26nBC"};
 
 /***/ },
-/* 82 */,
-/* 83 */
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5029,11 +5021,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _listitem = __webpack_require__(80);
+	var _listitem = __webpack_require__(76);
 
 	var _listitem2 = _interopRequireDefault(_listitem);
 
-	var _lists = __webpack_require__(81);
+	var _lists = __webpack_require__(77);
 
 	var _lists2 = _interopRequireDefault(_lists);
 
@@ -5061,7 +5053,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = OrderedList;
 
 /***/ },
-/* 84 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5104,7 +5096,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Section;
 
 /***/ },
-/* 85 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5117,11 +5109,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _header = __webpack_require__(76);
+	var _header = __webpack_require__(72);
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _header3 = __webpack_require__(86);
+	var _header3 = __webpack_require__(84);
 
 	var _header4 = _interopRequireDefault(_header3);
 
@@ -5147,15 +5139,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = TopHeader;
 
 /***/ },
-/* 86 */
+/* 84 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"icon":"header__icon___16ivI","twitter":"header__twitter___rbSR_","facebook":"header__facebook___3o6vM","linkedin":"header__linkedin___N7LSl","mail":"header__mail___1mkkX","zigzag":"header__zigzag___3pV01","header":"header__header___2OM32"};
 
 /***/ },
-/* 87 */,
-/* 88 */
+/* 85 */,
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5168,21 +5160,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _section = __webpack_require__(84);
+	var _section = __webpack_require__(82);
 
 	var _section2 = _interopRequireDefault(_section);
 
-	var _header = __webpack_require__(76);
+	var _header = __webpack_require__(72);
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _paragraph = __webpack_require__(77);
+	var _paragraph = __webpack_require__(73);
 
 	var _paragraph2 = _interopRequireDefault(_paragraph);
 
-	var _lists = __webpack_require__(78);
+	var _lists = __webpack_require__(74);
 
-	var _intro = __webpack_require__(89);
+	var _intro = __webpack_require__(87);
 
 	var _intro2 = _interopRequireDefault(_intro);
 
@@ -5231,9 +5223,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  );
 	};
 
-	// import { Section, Header, Paragraph, UnorderedList, ListItem } from '../../';
-
-
 	Introduction.propTypes = {
 	  title: _react2.default.PropTypes.string,
 	  tagLine: _react2.default.PropTypes.object,
@@ -5243,15 +5232,104 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Introduction;
 
 /***/ },
-/* 89 */
+/* 87 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"intro__icon___1F1p2","twitter":"intro__twitter___ctXIj","facebook":"intro__facebook___3sTiJ","linkedin":"intro__linkedin___10hPY","mail":"intro__mail___2ObYe","zigzag":"intro__zigzag___6kCXg","intro":"intro__intro___45RJa","tagLine":"intro__tagLine___AX4Zp"};
+	module.exports = {"icon":"intro__icon___1F1p2","twitter":"intro__twitter___ctXIj","facebook":"intro__facebook___3sTiJ","linkedin":"intro__linkedin___10hPY","mail":"intro__mail___2ObYe","intro":"intro__intro___45RJa","tagLine":"intro__tagLine___AX4Zp"};
 
 /***/ },
-/* 90 */,
-/* 91 */
+/* 88 */,
+/* 89 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(40);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _header = __webpack_require__(72);
+
+	var _header2 = _interopRequireDefault(_header);
+
+	var _section = __webpack_require__(82);
+
+	var _section2 = _interopRequireDefault(_section);
+
+	var _article = __webpack_require__(1);
+
+	var _article2 = _interopRequireDefault(_article);
+
+	var _lists = __webpack_require__(74);
+
+	var _achievements = __webpack_require__(90);
+
+	var _achievements2 = _interopRequireDefault(_achievements);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Achievements = function Achievements(_ref) {
+	  var _ref$achievements = _ref.achievements,
+	      achievements = _ref$achievements === undefined ? [{ company: '',
+	    achievements: []
+	  }] : _ref$achievements;
+	  return _react2.default.createElement(
+	    _section2.default,
+	    { className: _achievements2.default.achievements },
+	    _react2.default.createElement(
+	      _header2.default,
+	      { size: 2, className: [_achievements2.default.zigzag] },
+	      'Achievements'
+	    ),
+	    achievements.map(function (achievement, i) {
+	      return _react2.default.createElement(
+	        _article2.default,
+	        { key: i },
+	        _react2.default.createElement(
+	          _header2.default,
+	          { size: 3 },
+	          achievement.company
+	        ),
+	        _react2.default.createElement(
+	          _lists.UnorderedList,
+	          null,
+	          achievement.achievements.map(function (list, j) {
+	            return _react2.default.createElement(
+	              _lists.ListItem,
+	              { key: j },
+	              list
+	            );
+	          })
+	        )
+	      );
+	    })
+	  );
+	};
+
+	Achievements.propTypes = {
+	  achievements: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.shape({
+	    company: _react2.default.PropTypes.string,
+	    achievements: _react2.default.PropTypes.array
+	  }))
+	};
+
+	exports.default = Achievements;
+
+/***/ },
+/* 90 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"icon":"achievements__icon___3YDl0","twitter":"achievements__twitter___3b6mv","facebook":"achievements__facebook___2XkqH","linkedin":"achievements__linkedin___Ljbrf","mail":"achievements__mail___jyRVW","zigzag":"achievements__zigzag___3pmPx","achievements":"achievements__achievements___2I4sc"};
+
+/***/ },
+/* 91 */,
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5261,7 +5339,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.default = deprecated;
 
-	var _warning = __webpack_require__(92);
+	var _warning = __webpack_require__(93);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -5295,7 +5373,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	deprecated._resetWarned = _resetWarned;
 
 /***/ },
-/* 92 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
