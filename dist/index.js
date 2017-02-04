@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.deprecated = exports.TopHeader = exports.Section = exports.ListItem = exports.OrderedList = exports.UnorderedList = exports.Paragraph = exports.Header = exports.Aside = exports.Article = undefined;
+	exports.deprecated = exports.Introduction = exports.TopHeader = exports.Section = exports.ListItem = exports.OrderedList = exports.UnorderedList = exports.Paragraph = exports.Header = exports.Aside = exports.Article = undefined;
 
 	var _article = __webpack_require__(1);
 
@@ -87,7 +87,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _topheader2 = _interopRequireDefault(_topheader);
 
-	var _deprecated = __webpack_require__(88);
+	var _introduction = __webpack_require__(88);
+
+	var _introduction2 = _interopRequireDefault(_introduction);
+
+	var _deprecated = __webpack_require__(91);
 
 	var _deprecated2 = _interopRequireDefault(_deprecated);
 
@@ -102,6 +106,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.ListItem = _lists.ListItem;
 	exports.Section = _section2.default;
 	exports.TopHeader = _topheader2.default;
+	exports.Introduction = _introduction2.default;
 	exports.deprecated = _deprecated2.default;
 
 /***/ },
@@ -4874,7 +4879,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	Paragraph.propTypes = {
-	  children: _react2.default.PropTypes.node.isRequired,
+	  children: _react2.default.PropTypes.string.isRequired,
 	  style: _react2.default.PropTypes.object
 	};
 
@@ -5158,9 +5163,105 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _react = __webpack_require__(40);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _section = __webpack_require__(84);
+
+	var _section2 = _interopRequireDefault(_section);
+
+	var _header = __webpack_require__(76);
+
+	var _header2 = _interopRequireDefault(_header);
+
+	var _paragraph = __webpack_require__(77);
+
+	var _paragraph2 = _interopRequireDefault(_paragraph);
+
+	var _lists = __webpack_require__(78);
+
+	var _intro = __webpack_require__(89);
+
+	var _intro2 = _interopRequireDefault(_intro);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Introduction = function Introduction(_ref) {
+	  var title = _ref.title,
+	      _ref$tagLine = _ref.tagLine,
+	      tagLine = _ref$tagLine === undefined ? { primary: '', secondary: '' } : _ref$tagLine,
+	      _ref$competencies = _ref.competencies,
+	      competencies = _ref$competencies === undefined ? [] : _ref$competencies;
+	  return _react2.default.createElement(
+	    _section2.default,
+	    { className: _intro2.default.intro },
+	    _react2.default.createElement(
+	      _header2.default,
+	      { size: 2 },
+	      title
+	    ),
+	    _react2.default.createElement(
+	      _paragraph2.default,
+	      { style: { fontSize: 'large', textAlign: 'center' } },
+	      tagLine.primary
+	    ),
+	    tagLine.secondary && _react2.default.createElement(
+	      _paragraph2.default,
+	      { style: { textAlign: 'justified' } },
+	      tagLine.secondary
+	    ),
+	    _react2.default.createElement(
+	      _header2.default,
+	      { size: 3 },
+	      'Additional competencies include:'
+	    ),
+	    _react2.default.createElement(
+	      _lists.UnorderedList,
+	      null,
+	      competencies.map(function (competency, i) {
+	        return _react2.default.createElement(
+	          _lists.ListItem,
+	          { key: i },
+	          competency
+	        );
+	      })
+	    )
+	  );
+	};
+
+	// import { Section, Header, Paragraph, UnorderedList, ListItem } from '../../';
+
+
+	Introduction.propTypes = {
+	  title: _react2.default.PropTypes.string,
+	  tagLine: _react2.default.PropTypes.object,
+	  competencies: _react2.default.PropTypes.array
+	};
+
+	exports.default = Introduction;
+
+/***/ },
+/* 89 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"icon":"intro__icon___1F1p2","twitter":"intro__twitter___ctXIj","facebook":"intro__facebook___3sTiJ","linkedin":"intro__linkedin___10hPY","mail":"intro__mail___2ObYe","zigzag":"intro__zigzag___6kCXg","intro":"intro__intro___45RJa","tagLine":"intro__tagLine___AX4Zp"};
+
+/***/ },
+/* 90 */,
+/* 91 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	exports.default = deprecated;
 
-	var _warning = __webpack_require__(89);
+	var _warning = __webpack_require__(92);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -5194,7 +5295,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	deprecated._resetWarned = _resetWarned;
 
 /***/ },
-/* 89 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
