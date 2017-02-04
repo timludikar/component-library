@@ -194,6 +194,9 @@ html {
 .intro__intro___45RJa .intro__tagLine___AX4Zp {
   margin-bottom: 10px;
 }
+.intro__intro___45RJa h3 {
+  color: #add8e6;
+}
 .achievements__icon___3YDl0 {
   display: inline-block;
   width: 32px;
@@ -287,6 +290,7 @@ html {
   margin-bottom: 2%;
 }
 .achievements__achievements___2I4sc article h3 {
+  color: #add8e6;
   margin-top: 0;
   text-transform: uppercase;
   text-align: left;
