@@ -12,11 +12,14 @@ function loadStories() {
   require('../src/components/lists/stories');
   require('../src/components/paragraph/stories');
   require('../src/components/section/stories');
+  require('../src/components/wrapper/stories');
 
   // Container Elements
   require('../src/containers/topheader/stories');
   require('../src/containers/introduction/stories');
   require('../src/containers/achievements/stories');
+  require('../src/containers/skills/stories');
+
 }
 
 configure(loadStories, module);
