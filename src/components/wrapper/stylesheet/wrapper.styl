@@ -1,0 +1,18 @@
+@import('../../../common/variables.styl');
+@import('../../../common/zigzag.styl');
+
+page(n)
+  +above(rupture.mobile-cutoff)
+    column(1/n, $cycle: n)
+
+.wrapper
+  wrapper()
+
+.col2
+  page(2);
+
+.col3
+  page(3);
+
+.col4
+  page(4);

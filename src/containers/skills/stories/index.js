@@ -85,6 +85,10 @@ storiesOf('container.Skills', module)
       'Well spoken.',
     ];
     return (
-      <Skills title={title} skills={skills} className="thirdpage" />
+      <Wrapper>
+        <Skills title={title} skills={skills} className="thirdpage" />
+        <Skills title={title} skills={skills} className="thirdpage" />
+        <Skills title={title} skills={skills} className="thirdpage" />
+      </Wrapper>
     );
   });

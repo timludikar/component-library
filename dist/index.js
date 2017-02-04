@@ -5122,9 +5122,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _column = __webpack_require__(84);
+	var _wrapper = __webpack_require__(84);
 
-	var _column2 = _interopRequireDefault(_column);
+	var _wrapper2 = _interopRequireDefault(_wrapper);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5132,7 +5132,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var children = _ref.children,
 	      className = _ref.className;
 
-	  var cssClass = _column2.default[className] + ' ' + _column2.default.wrapper;
+	  var cssClass = _wrapper2.default[className] + ' ' + _wrapper2.default.wrapper;
 
 	  return _react2.default.createElement(
 	    'div',
@@ -5155,7 +5155,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"column__icon___1DaKP","twitter":"column__twitter___2YlEo","facebook":"column__facebook___Xu5ZE","linkedin":"column__linkedin___3i1eA","mail":"column__mail___3SVok","zigzag":"column__zigzag___1dndk","wrapper":"column__wrapper___2pUii"};
+	module.exports = {"icon":"wrapper__icon___1YcQQ","twitter":"wrapper__twitter___1lZWh","facebook":"wrapper__facebook___q03gS","linkedin":"wrapper__linkedin___1RtVK","mail":"wrapper__mail___1JC8u","zigzag":"wrapper__zigzag___3wsx0","wrapper":"wrapper__wrapper___ypi6t","col2":"wrapper__col2___3uxIm","col3":"wrapper__col3___2YYT5","col4":"wrapper__col4___22mDK"};
 
 /***/ },
 /* 85 */,

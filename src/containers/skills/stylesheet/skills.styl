@@ -6,10 +6,10 @@ col(n)
     column(1/n, $cycle: n)
 
 page(n)
-  column(1/n, $cycle: n)
+  +above(rupture.mobile-cutoff)
+    column(1/n, $cycle: n)
 
 .skills
-  wrapper();
   h2
     text-transform: uppercase;
     font-weight: bold;

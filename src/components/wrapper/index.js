@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './stylesheet/column.styl';
+import styles from './stylesheet/wrapper.styl';
 
 const Wrapper = ({ children, className }) => {
   const cssClass = `${styles[className]} ${styles.wrapper}`;
