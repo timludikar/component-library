@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, render, mount } from 'enzyme';
+import { render } from 'enzyme';
 import { expect } from 'chai';
 import TopHeader from '../index';
 

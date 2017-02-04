@@ -1,25 +1,18 @@
 import React from 'react';
 
-const articleStyles = {
-  border: '1px solid #eee',
-  borderRadius: 3,
-  backgroundColor: '#FFFFFF',
-  cursor: 'pointer',
-  fontSize: 15,
-  padding: '3px 10px',
-};
+const paragraphStyles = {};
 
-const Article = ({ children, style = {} }) => (
-  <article
-    style={{ ...articleStyles, ...style }}
+const Paragraph = ({ children, style = {} }) => (
+  <p
+    style={{ ...paragraphStyles, ...style }}
   >
     {children}
-  </article>
+  </p>
 );
 
-Article.propTypes = {
+Paragraph.propTypes = {
   children: React.PropTypes.node.isRequired,
   style: React.PropTypes.object,
 };
 
-export default Article;
+export default Paragraph;

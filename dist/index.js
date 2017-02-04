@@ -83,11 +83,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _section2 = _interopRequireDefault(_section);
 
-	var _header3 = __webpack_require__(87);
+	var _topheader = __webpack_require__(85);
 
-	var _header4 = _interopRequireDefault(_header3);
+	var _topheader2 = _interopRequireDefault(_topheader);
 
-	var _deprecated = __webpack_require__(90);
+	var _deprecated = __webpack_require__(88);
 
 	var _deprecated2 = _interopRequireDefault(_deprecated);
 
@@ -101,7 +101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.OrderedList = _lists.OrderedList;
 	exports.ListItem = _lists.ListItem;
 	exports.Section = _section2.default;
-	exports.TopHeader = _header4.default;
+	exports.TopHeader = _topheader2.default;
 	exports.deprecated = _deprecated2.default;
 
 /***/ },
@@ -4858,34 +4858,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var articleStyles = {
-	  border: '1px solid #eee',
-	  borderRadius: 3,
-	  backgroundColor: '#FFFFFF',
-	  cursor: 'pointer',
-	  fontSize: 15,
-	  padding: '3px 10px'
-	};
+	var paragraphStyles = {};
 
-	var Article = function Article(_ref) {
+	var Paragraph = function Paragraph(_ref) {
 	  var children = _ref.children,
 	      _ref$style = _ref.style,
 	      style = _ref$style === undefined ? {} : _ref$style;
 	  return _react2.default.createElement(
-	    'article',
+	    'p',
 	    {
-	      style: (0, _extends3.default)({}, articleStyles, style)
+	      style: (0, _extends3.default)({}, paragraphStyles, style)
 	    },
 	    children
 	  );
 	};
 
-	Article.propTypes = {
+	Paragraph.propTypes = {
 	  children: _react2.default.PropTypes.node.isRequired,
 	  style: _react2.default.PropTypes.object
 	};
 
-	exports.default = Article;
+	exports.default = Paragraph;
 
 /***/ },
 /* 78 */
@@ -5080,20 +5073,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _section = __webpack_require__(85);
-
-	var _section2 = _interopRequireDefault(_section);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Section = function Section(_ref) {
 	  var children = _ref.children,
 	      _ref$style = _ref.style,
-	      style = _ref$style === undefined ? {} : _ref$style;
+	      style = _ref$style === undefined ? {} : _ref$style,
+	      className = _ref.className;
 	  return _react2.default.createElement(
 	    'section',
 	    {
-	      className: _section2.default.section,
+	      className: className,
 	      style: (0, _extends3.default)({}, style)
 	    },
 	    children
@@ -5101,6 +5091,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	Section.propTypes = {
+	  className: _react2.default.PropTypes.string,
 	  children: _react2.default.PropTypes.node.isRequired,
 	  style: _react2.default.PropTypes.object
 	};
@@ -5109,14 +5100,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 85 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-	module.exports = {"section":"section__section___3KvKS"};
-
-/***/ },
-/* 86 */,
-/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5133,7 +5116,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _header3 = __webpack_require__(88);
+	var _header3 = __webpack_require__(86);
 
 	var _header4 = _interopRequireDefault(_header3);
 
@@ -5159,15 +5142,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = TopHeader;
 
 /***/ },
-/* 88 */
+/* 86 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"header__icon___3edxH","twitter":"header__twitter___2eGL9","facebook":"header__facebook___2yTm3","linkedin":"header__linkedin___3-_F8","mail":"header__mail___1PdJY","zigzag":"header__zigzag___200nf","header":"header__header___3InEI"};
+	module.exports = {"icon":"header__icon___16ivI","twitter":"header__twitter___rbSR_","facebook":"header__facebook___3o6vM","linkedin":"header__linkedin___N7LSl","mail":"header__mail___1mkkX","zigzag":"header__zigzag___3pV01","header":"header__header___2OM32"};
 
 /***/ },
-/* 89 */,
-/* 90 */
+/* 87 */,
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5177,7 +5160,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.default = deprecated;
 
-	var _warning = __webpack_require__(91);
+	var _warning = __webpack_require__(89);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -5211,7 +5194,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	deprecated._resetWarned = _resetWarned;
 
 /***/ },
-/* 91 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**

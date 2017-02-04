@@ -1,9 +1,8 @@
 import React from 'react';
-import styles from './stylesheet/section.styl';
 
-const Section = ({ children, style = {} }) => (
+const Section = ({ children, style = {}, className }) => (
   <section
-    className={styles.section}
+    className={className}
     style={{ ...style }}
   >
     {children}
@@ -11,6 +10,7 @@ const Section = ({ children, style = {} }) => (
 );
 
 Section.propTypes = {
+  className: React.PropTypes.string,
   children: React.PropTypes.node.isRequired,
   style: React.PropTypes.object,
 };

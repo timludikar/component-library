@@ -15,6 +15,7 @@ function loadStories() {
 
   // Container Elements
   require('../src/containers/topheader/stories');
+  require('../src/containers/introduction/stories');
 }
 
 configure(loadStories, module);
