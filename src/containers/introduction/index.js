@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import { Section, Header, Paragraph, UnorderedList, ListItem } from '../../';
 import Section from '../../components/section';
 import Header from '../../components/header';
 import Paragraph from '../../components/paragraph';
