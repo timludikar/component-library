@@ -1,0 +1,30 @@
+@import('../../../common/variables.styl');
+@import('../../../common/zigzag.styl');
+
+.experience
+  h2
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+  article
+    aside
+      +above(rupture.mobile-cutoff)
+        column(1/3)
+      h3
+        color: $lightblue;
+        text-transform: uppercase;
+        text-align: left;
+        margin: 0;
+      p
+        margin: 0;
+    main
+      +above(rupture.mobile-cutoff)
+        column(2/3)
+      h4
+        text-transform: uppercase;
+        color: $lightgrey;
+        margin: 10px 0 0 0;
+        +above(rupture.mobile-cutoff)
+          display: table-cell
+          float: none
+      ul
