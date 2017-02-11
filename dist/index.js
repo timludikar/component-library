@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.Containers = exports.Components = undefined;
+	exports.Models = exports.Containers = exports.Components = undefined;
 
 	var _components = __webpack_require__(1);
 
@@ -69,7 +69,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var Containers = _interopRequireWildcard(_containers);
 
-	var _deprecated = __webpack_require__(111);
+	var _models = __webpack_require__(102);
+
+	var Models = _interopRequireWildcard(_models);
+
+	var _deprecated = __webpack_require__(113);
 
 	var _deprecated2 = _interopRequireDefault(_deprecated);
 
@@ -79,6 +83,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.Components = Components;
 	exports.Containers = Containers;
+	exports.Models = Models;
 
 /***/ },
 /* 1 */
@@ -4788,11 +4793,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	var Aside = function Aside(_ref) {
 	  var children = _ref.children,
 	      _ref$style = _ref.style,
-	      style = _ref$style === undefined ? {} : _ref$style;
+	      style = _ref$style === undefined ? {} : _ref$style,
+	      className = _ref.className;
+
+	  var cssClass = '' + className;
+	  console.log(className);
+
 	  return _react2.default.createElement(
 	    'aside',
 	    {
-	      style: (0, _extends3.default)({}, asideStyles, style)
+	      style: (0, _extends3.default)({}, asideStyles, style),
+	      className: cssClass
 	    },
 	    children
 	  );
@@ -5202,7 +5213,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"wrapper__icon___1YcQQ","twitter":"wrapper__twitter___1lZWh","facebook":"wrapper__facebook___q03gS","linkedin":"wrapper__linkedin___1RtVK","mail":"wrapper__mail___1JC8u","zigzag":"wrapper__zigzag___3wsx0","wrapper":"wrapper__wrapper___ypi6t","col2":"wrapper__col2___3uxIm","col3":"wrapper__col3___2YYT5","col4":"wrapper__col4___22mDK"};
+	module.exports = {"icon":"wrapper__icon___1YcQQ","twitter":"wrapper__twitter___1lZWh","facebook":"wrapper__facebook___q03gS","linkedin":"wrapper__linkedin___1RtVK","mail":"wrapper__mail___1JC8u","col3":"wrapper__col3___2YYT5","col2":"wrapper__col2___3uxIm","halfpage":"wrapper__halfpage___2bhfi","thirdpage":"wrapper__thirdpage___37eDm","zigzag":"wrapper__zigzag___3wsx0","wrapper":"wrapper__wrapper___ypi6t","col4":"wrapper__col4___22mDK"};
 
 /***/ },
 /* 87 */,
@@ -5292,7 +5303,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"header__icon___16ivI","twitter":"header__twitter___rbSR_","facebook":"header__facebook___3o6vM","linkedin":"header__linkedin___N7LSl","mail":"header__mail___1mkkX","zigzag":"header__zigzag___3pV01","header":"header__header___2OM32"};
+	module.exports = {"icon":"header__icon___16ivI","twitter":"header__twitter___rbSR_","facebook":"header__facebook___3o6vM","linkedin":"header__linkedin___N7LSl","mail":"header__mail___1mkkX","col3":"header__col3___1rUUC","col2":"header__col2___2tblb","halfpage":"header__halfpage___2ifEY","thirdpage":"header__thirdpage___nZMTy","zigzag":"header__zigzag___3pV01","header":"header__header___2OM32"};
 
 /***/ },
 /* 91 */,
@@ -5385,7 +5396,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"intro__icon___1F1p2","twitter":"intro__twitter___ctXIj","facebook":"intro__facebook___3sTiJ","linkedin":"intro__linkedin___10hPY","mail":"intro__mail___2ObYe","intro":"intro__intro___45RJa","tagLine":"intro__tagLine___AX4Zp"};
+	module.exports = {"icon":"intro__icon___1F1p2","twitter":"intro__twitter___ctXIj","facebook":"intro__facebook___3sTiJ","linkedin":"intro__linkedin___10hPY","mail":"intro__mail___2ObYe","col3":"intro__col3___2xKRX","col2":"intro__col2___3yi0c","halfpage":"intro__halfpage___1fLEQ","thirdpage":"intro__thirdpage___3U8gT","intro":"intro__intro___45RJa","tagLine":"intro__tagLine___AX4Zp"};
 
 /***/ },
 /* 94 */,
@@ -5474,7 +5485,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"achievements__icon___3YDl0","twitter":"achievements__twitter___3b6mv","facebook":"achievements__facebook___2XkqH","linkedin":"achievements__linkedin___Ljbrf","mail":"achievements__mail___jyRVW","zigzag":"achievements__zigzag___3pmPx","achievements":"achievements__achievements___2I4sc"};
+	module.exports = {"icon":"achievements__icon___3YDl0","twitter":"achievements__twitter___3b6mv","facebook":"achievements__facebook___2XkqH","linkedin":"achievements__linkedin___Ljbrf","mail":"achievements__mail___jyRVW","col3":"achievements__col3___3ME7-","col2":"achievements__col2___3cqPz","halfpage":"achievements__halfpage___ilnBi","thirdpage":"achievements__thirdpage___WvGKQ","zigzag":"achievements__zigzag___3pmPx","achievements":"achievements__achievements___2I4sc"};
 
 /***/ },
 /* 97 */,
@@ -5554,7 +5565,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"skills__icon___2LV0U","twitter":"skills__twitter___3UZO-","facebook":"skills__facebook___2U-rH","linkedin":"skills__linkedin___BMe-r","mail":"skills__mail___2sAy2","zigzag":"skills__zigzag___2ST5r","skills":"skills__skills___2BTXP","col3":"skills__col3___2TpFj","col2":"skills__col2___3jzT6","halfpage":"skills__halfpage___1NEnO","thirdpage":"skills__thirdpage___2WS7h"};
+	module.exports = {"icon":"skills__icon___2LV0U","twitter":"skills__twitter___3UZO-","facebook":"skills__facebook___2U-rH","linkedin":"skills__linkedin___BMe-r","mail":"skills__mail___2sAy2","col3":"skills__col3___2TpFj","col2":"skills__col2___3jzT6","halfpage":"skills__halfpage___1NEnO","thirdpage":"skills__thirdpage___2WS7h","zigzag":"skills__zigzag___2ST5r","skills":"skills__skills___2BTXP"};
 
 /***/ },
 /* 100 */,
@@ -5599,37 +5610,53 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _models = __webpack_require__(102);
 
-	var _experience = __webpack_require__(109);
+	var _experience = __webpack_require__(111);
 
 	var _experience2 = _interopRequireDefault(_experience);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var listView = function listView(item, id) {
+	  return _react2.default.createElement(
+	    _lists.ListItem,
+	    null,
+	    item
+	  );
+	};
+
+	var asideView = function asideView(title, date, description) {
+	  var cssClass = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "";
+	  return _react2.default.createElement(
+	    _aside2.default,
+	    { className: cssClass },
+	    _react2.default.createElement(
+	      _header2.default,
+	      { size: 3 },
+	      title
+	    ),
+	    _react2.default.createElement(
+	      _paragraph2.default,
+	      null,
+	      date
+	    ),
+	    _react2.default.createElement(
+	      _paragraph2.default,
+	      null,
+	      description
+	    )
+	  );
+	};
+
 	var employmentView = function employmentView(employment, i) {
+	  var title = employment.title,
+	      date = employment.date,
+	      city = employment.city,
+	      country = employment.country;
+
 	  return _react2.default.createElement(
 	    _article2.default,
 	    { key: i },
-	    _react2.default.createElement(
-	      _aside2.default,
-	      null,
-	      _react2.default.createElement(
-	        _header2.default,
-	        { size: 3 },
-	        employment.company
-	      ),
-	      _react2.default.createElement(
-	        _paragraph2.default,
-	        null,
-	        employment.city,
-	        ', ',
-	        employment.country
-	      ),
-	      _react2.default.createElement(
-	        _paragraph2.default,
-	        null,
-	        employment.date
-	      )
-	    ),
+	    asideView(title, date, city + ', ' + country),
 	    _react2.default.createElement(
 	      _main2.default,
 	      null,
@@ -5641,28 +5668,60 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _react2.default.createElement(
 	        _lists.UnorderedList,
 	        null,
-	        employment.experiences.map(function (item, id) {
-	          return _react2.default.createElement(
-	            _lists.ListItem,
-	            null,
-	            item
-	          );
-	        })
+	        employment.experiences.map(listView)
 	      )
 	    )
 	  );
 	};
 
+	var organizationView = function organizationView(organization, i) {
+	  var title = organization.title,
+	      date = organization.date,
+	      description = organization.description;
+
+	  return _react2.default.createElement(
+	    _article2.default,
+	    { key: i },
+	    asideView(title, date, description),
+	    _react2.default.createElement(
+	      _main2.default,
+	      null,
+	      _react2.default.createElement(
+	        _lists.UnorderedList,
+	        null,
+	        organization.experiences.map(listView)
+	      )
+	    )
+	  );
+	};
+
+	var certificationView = function certificationView(certification, i) {
+	  var title = certification.title,
+	      date = certification.date,
+	      organization = certification.organization;
+
+	  return _react2.default.createElement(
+	    _article2.default,
+	    { key: i },
+	    asideView(organization, date, title, _experience2.default.nocolumn)
+	  );
+	};
+
 	var Experience = function Experience(_ref) {
 	  var title = _ref.title,
-	      children = _ref.children;
+	      children = _ref.children,
+	      className = _ref.className;
 
 	  var renderMethod = void 0;
-	  if (children[0].getClassName() == "Employment") renderMethod = employmentView;
+	  console.log(className);
+	  var cssClass = _experience2.default[className] + ' ' + _experience2.default.experience;
+	  console.log(cssClass);
+
+	  if (children[0].getClassName() == "Employment") renderMethod = employmentView;else if (children[0].getClassName() == "Organization") renderMethod = organizationView;else if (children[0].getClassName() == "Certification") renderMethod = certificationView;
 
 	  return _react2.default.createElement(
 	    _section2.default,
-	    { className: _experience2.default.experience },
+	    { className: cssClass },
 	    _react2.default.createElement(
 	      _header2.default,
 	      { size: 2, className: [_experience2.default.zigzag] },
@@ -5688,15 +5747,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.Employment = undefined;
+	exports.Certification = exports.Organization = exports.Employment = undefined;
 
 	var _employment = __webpack_require__(103);
 
 	var _employment2 = _interopRequireDefault(_employment);
 
+	var _organization = __webpack_require__(109);
+
+	var _organization2 = _interopRequireDefault(_organization);
+
+	var _certification = __webpack_require__(110);
+
+	var _certification2 = _interopRequireDefault(_certification);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.Employment = _employment2.default;
+	exports.Organization = _organization2.default;
+	exports.Certification = _certification2.default;
 
 /***/ },
 /* 103 */
@@ -5813,14 +5882,103 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 109 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(104);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(105);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Organization = function () {
+	  function Organization(title, organization, start, end, experiences) {
+	    (0, _classCallCheck3.default)(this, Organization);
+
+	    this.organization = organization;
+	    this.title = title;
+	    this.date = start + " - " + end;
+	    this.experiences = experiences || [];
+	  }
+
+	  (0, _createClass3.default)(Organization, [{
+	    key: "getClassName",
+	    value: function getClassName() {
+	      return Organization.name;
+	    }
+	  }, {
+	    key: "description",
+	    get: function get() {
+	      this.experiences;
+	    },
+	    set: function set(props) {
+	      this.experiences = props || [];
+	    }
+	  }]);
+	  return Organization;
+	}();
+
+	exports.default = Organization;
+
+/***/ },
+/* 110 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _classCallCheck2 = __webpack_require__(104);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(105);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Certification = function () {
+	  function Certification(title, organization, start, end) {
+	    (0, _classCallCheck3.default)(this, Certification);
+
+	    this.organization = organization;
+	    this.title = title;
+	    this.date = start + " - " + end;
+	  }
+
+	  (0, _createClass3.default)(Certification, [{
+	    key: "getClassName",
+	    value: function getClassName() {
+	      return Certification.name;
+	    }
+	  }]);
+	  return Certification;
+	}();
+
+	exports.default = Certification;
+
+/***/ },
+/* 111 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"experience__icon___24DbL","twitter":"experience__twitter___1KasB","facebook":"experience__facebook___qSSEz","linkedin":"experience__linkedin___3b5Gu","mail":"experience__mail___81MVq","zigzag":"experience__zigzag___3wdxN","experience":"experience__experience___NMNIW"};
+	module.exports = {"icon":"experience__icon___24DbL","twitter":"experience__twitter___1KasB","facebook":"experience__facebook___qSSEz","linkedin":"experience__linkedin___3b5Gu","mail":"experience__mail___81MVq","col3":"experience__col3___MZSd5","col2":"experience__col2___3aKDZ","halfpage":"experience__halfpage___QJBzg","thirdpage":"experience__thirdpage___33E9-","zigzag":"experience__zigzag___3wdxN","experience":"experience__experience___NMNIW","nocolumn":"experience__nocolumn___57ab8"};
 
 /***/ },
-/* 110 */,
-/* 111 */
+/* 112 */,
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5830,7 +5988,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.default = deprecated;
 
-	var _warning = __webpack_require__(112);
+	var _warning = __webpack_require__(114);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -5864,7 +6022,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	deprecated._resetWarned = _resetWarned;
 
 /***/ },
-/* 112 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**

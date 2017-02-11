@@ -63,17 +63,20 @@ const certificationView = (certification, i) => {
 
 const Experience = ({
   title,
-  children
+  children,
+  className,
 }) => {
   let renderMethod;
+  console.log(className);
+  const cssClass = `${styles[className]} ${styles.experience}`;
+  console.log(cssClass);
 
-  console.log(styles);
   if(children[0].getClassName() == "Employment") renderMethod = employmentView;
   else if (children[0].getClassName() == "Organization") renderMethod = organizationView;
   else if (children[0].getClassName() == "Certification") renderMethod = certificationView;
 
   return (
-    <Section className={styles.experience}>
+    <Section className={cssClass}>
       <Header size={2} className={[styles.zigzag]}>{title}</Header>
       { children.map( renderMethod )}
     </Section>

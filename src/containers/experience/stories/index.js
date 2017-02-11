@@ -46,7 +46,7 @@ storiesOf('container.Experience', module)
 
     return (
       <Wrapper>
-        <Experience title={title}>{[iet]}</Experience>
+        <Experience title={title} className={"halfpage"}>{[iet]}</Experience>
       </Wrapper>
     );
   });

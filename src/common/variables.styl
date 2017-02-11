@@ -10,9 +10,29 @@ html {
   font-family: 'Oswald', sans-serif;
 }
 
+col(n)
+  li
+    column(1/n, $cycle: n)
+
+page(n)
+  +above(rupture.mobile-cutoff)
+    column(1/n, $cycle: n)
+
 wrapper()
   center(350px)
   +above(rupture.mobile-cutoff)
     center(800px)
   +above(rupture.desktop-cutoff)
     center(1000px)
+
+.col3
+  col(3)
+
+.col2
+  col(2)
+
+.halfpage
+  page(2)
+
+.thirdpage
+  page(3)
