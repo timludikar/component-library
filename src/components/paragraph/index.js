@@ -11,7 +11,7 @@ const Paragraph = ({ children, style = {} }) => (
 );
 
 Paragraph.propTypes = {
-  children: React.PropTypes.string.isRequired,
+  children: React.PropTypes.string,
   style: React.PropTypes.object,
 };
 

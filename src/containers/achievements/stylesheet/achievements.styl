@@ -2,12 +2,11 @@
 @import('../../../common/variables.styl');
 @import('../../../common/zigzag.styl');
 
+$base
+  @import '../../_base/stylesheet/_base.styl';
+
 .achievements
-  wrapper();
-  h2
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: left;
+  @extend $base .base;
   article
     margin-bottom: 2%;
     h3

@@ -16,6 +16,7 @@ function loadStories() {
   require('../src/components/wrapper/stories');
 
   // Container Elements
+  require('../src/containers/_base/stories');
   require('../src/containers/topheader/stories');
   require('../src/containers/introduction/stories');
   require('../src/containers/achievements/stories');

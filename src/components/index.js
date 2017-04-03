@@ -16,4 +16,4 @@ export {
   Section,
   Main,
   Wrapper,
-}
+};

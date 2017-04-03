@@ -1,7 +1,7 @@
 import React from 'react';
 
+import Base from '../_base';
 import Header from '../../components/header';
-import Section from '../../components/section';
 import Article from '../../components/article';
 import { UnorderedList, ListItem } from '../../components/lists';
 
@@ -13,23 +13,24 @@ const Achievements = ({
       achievements: [],
     },
   ],
-}) => (
-  <Section className={styles.achievements}>
-    <Header size={2} className={[styles.zigzag]}>Achievements</Header>
-    { achievements.map((achievement, i) => {
-      return (
-        <Article key={i}>
-          <Header size={3}>{achievement.company}</Header>
-          <UnorderedList>
-            { achievement.achievements.map((list, j) => {
-              return <ListItem key={j}>{list}</ListItem>;
-            })}
-          </UnorderedList>
-        </Article>
-      );
-    })}
-  </Section>
-);
+}) => {
+  const achievementList = (achievement, i) => (
+    <Article key={i}>
+      <Header size={3}>{achievement.company}</Header>
+      <UnorderedList>
+        { achievement.achievements.map((list, j) => {
+          return <ListItem key={j}>{list}</ListItem>;
+        })}
+      </UnorderedList>
+    </Article>
+  );
+
+  return (
+    <Base title="Achievements" className={styles.achievements}>
+      { achievements.map(achievementList) }
+    </Base>
+  );
+};
 
 Achievements.propTypes = {
   achievements: React.PropTypes.arrayOf(

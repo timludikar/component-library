@@ -69,15 +69,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var Containers = _interopRequireWildcard(_containers);
 
-	var _models = __webpack_require__(102);
+	var _models = __webpack_require__(107);
 
 	var Models = _interopRequireWildcard(_models);
-
-	var _deprecated = __webpack_require__(113);
-
-	var _deprecated2 = _interopRequireDefault(_deprecated);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -4797,7 +4791,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      className = _ref.className;
 
 	  var cssClass = '' + className;
-	  console.log(className);
 
 	  return _react2.default.createElement(
 	    'aside',
@@ -4810,6 +4803,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	Aside.propTypes = {
+	  className: _react2.default.PropTypes.string.isRequired,
 	  children: _react2.default.PropTypes.node.isRequired,
 	  style: _react2.default.PropTypes.object
 	};
@@ -4895,7 +4889,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	Paragraph.propTypes = {
-	  children: _react2.default.PropTypes.string.isRequired,
+	  children: _react2.default.PropTypes.string,
 	  style: _react2.default.PropTypes.object
 	};
 
@@ -5239,11 +5233,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _achievements2 = _interopRequireDefault(_achievements);
 
-	var _skills = __webpack_require__(98);
+	var _skills = __webpack_require__(101);
 
 	var _skills2 = _interopRequireDefault(_skills);
 
-	var _experience = __webpack_require__(101);
+	var _experience = __webpack_require__(104);
 
 	var _experience2 = _interopRequireDefault(_experience);
 
@@ -5413,13 +5407,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _base = __webpack_require__(96);
+
+	var _base2 = _interopRequireDefault(_base);
+
 	var _header = __webpack_require__(73);
 
 	var _header2 = _interopRequireDefault(_header);
-
-	var _section = __webpack_require__(83);
-
-	var _section2 = _interopRequireDefault(_section);
 
 	var _article = __webpack_require__(2);
 
@@ -5427,7 +5421,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _lists = __webpack_require__(75);
 
-	var _achievements = __webpack_require__(96);
+	var _achievements = __webpack_require__(99);
 
 	var _achievements2 = _interopRequireDefault(_achievements);
 
@@ -5438,36 +5432,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	      achievements = _ref$achievements === undefined ? [{ company: '',
 	    achievements: []
 	  }] : _ref$achievements;
+
+	  var achievementList = function achievementList(achievement, i) {
+	    return _react2.default.createElement(
+	      _article2.default,
+	      { key: i },
+	      _react2.default.createElement(
+	        _header2.default,
+	        { size: 3 },
+	        achievement.company
+	      ),
+	      _react2.default.createElement(
+	        _lists.UnorderedList,
+	        null,
+	        achievement.achievements.map(function (list, j) {
+	          return _react2.default.createElement(
+	            _lists.ListItem,
+	            { key: j },
+	            list
+	          );
+	        })
+	      )
+	    );
+	  };
+
 	  return _react2.default.createElement(
-	    _section2.default,
-	    { className: _achievements2.default.achievements },
-	    _react2.default.createElement(
-	      _header2.default,
-	      { size: 2, className: [_achievements2.default.zigzag] },
-	      'Achievements'
-	    ),
-	    achievements.map(function (achievement, i) {
-	      return _react2.default.createElement(
-	        _article2.default,
-	        { key: i },
-	        _react2.default.createElement(
-	          _header2.default,
-	          { size: 3 },
-	          achievement.company
-	        ),
-	        _react2.default.createElement(
-	          _lists.UnorderedList,
-	          null,
-	          achievement.achievements.map(function (list, j) {
-	            return _react2.default.createElement(
-	              _lists.ListItem,
-	              { key: j },
-	              list
-	            );
-	          })
-	        )
-	      );
-	    })
+	    _base2.default,
+	    { title: 'Achievements', className: _achievements2.default.achievements },
+	    achievements.map(achievementList)
 	  );
 	};
 
@@ -5482,14 +5474,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 96 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"achievements__icon___3YDl0","twitter":"achievements__twitter___3b6mv","facebook":"achievements__facebook___2XkqH","linkedin":"achievements__linkedin___Ljbrf","mail":"achievements__mail___jyRVW","col3":"achievements__col3___3ME7-","col2":"achievements__col2___3cqPz","halfpage":"achievements__halfpage___ilnBi","thirdpage":"achievements__thirdpage___WvGKQ","zigzag":"achievements__zigzag___3pmPx","achievements":"achievements__achievements___2I4sc"};
-
-/***/ },
-/* 97 */,
-/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5510,62 +5494,50 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _section2 = _interopRequireDefault(_section);
 
-	var _lists = __webpack_require__(75);
+	var _base = __webpack_require__(97);
 
-	var _skills = __webpack_require__(99);
-
-	var _skills2 = _interopRequireDefault(_skills);
+	var _base2 = _interopRequireDefault(_base);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Skills = function Skills(_ref) {
+	var BaseContainer = function BaseContainer(_ref) {
 	  var title = _ref.title,
-	      _ref$skills = _ref.skills,
-	      skills = _ref$skills === undefined ? [] : _ref$skills,
-	      _ref$bulleted = _ref.bulleted,
-	      bulleted = _ref$bulleted === undefined ? true : _ref$bulleted,
-	      className = _ref.className;
-
-	  var list = skills.map(function (skill, i) {
-	    return _react2.default.createElement(
-	      _lists.ListItem,
-	      { key: i },
-	      skill
-	    );
-	  });
-	  var cssClass = _skills2.default[className] + ' ' + _skills2.default.skills;
-
+	      className = _ref.className,
+	      children = _ref.children;
 	  return _react2.default.createElement(
 	    _section2.default,
-	    { className: cssClass },
+	    { title: title, className: className },
 	    _react2.default.createElement(
 	      _header2.default,
-	      { size: 2, className: [_skills2.default.zigzag] },
+	      { size: 2, className: [_base2.default.zigzag] },
 	      title
 	    ),
-	    _react2.default.createElement(
-	      _lists.UnorderedList,
-	      { style: bulleted ? ' ' : { 'list-style-type': 'none' } },
-	      list
-	    )
+	    children
 	  );
 	};
 
-	Skills.propTypes = {
-	  className: _react2.default.PropTypes.string,
-	  title: _react2.default.PropTypes.string.isRequired,
-	  skills: _react2.default.PropTypes.array.isRequired,
-	  bulleted: _react2.default.PropTypes.boolean
+	BaseContainer.propTypes = {
+	  title: _react2.default.PropTypes.string,
+	  className: _react2.default.PropTypes.node,
+	  children: _react2.default.PropTypes.node.isRequired
 	};
 
-	exports.default = Skills;
+	exports.default = BaseContainer;
 
 /***/ },
+/* 97 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"icon":"_base__icon___3XrKj","twitter":"_base__twitter___2tEh2","facebook":"_base__facebook___20GBa","linkedin":"_base__linkedin___3CmVO","mail":"_base__mail___3CcWO","col3":"_base__col3___D1bbF","col2":"_base__col2___qh94L","halfpage":"_base__halfpage___18G3f","thirdpage":"_base__thirdpage___13xBQ","zigzag":"_base__zigzag___39L0e","base":"_base__base___2dX3Q"};
+
+/***/ },
+/* 98 */,
 /* 99 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"skills__icon___2LV0U","twitter":"skills__twitter___3UZO-","facebook":"skills__facebook___2U-rH","linkedin":"skills__linkedin___BMe-r","mail":"skills__mail___2sAy2","col3":"skills__col3___2TpFj","col2":"skills__col2___3jzT6","halfpage":"skills__halfpage___1NEnO","thirdpage":"skills__thirdpage___2WS7h","zigzag":"skills__zigzag___2ST5r","skills":"skills__skills___2BTXP"};
+	module.exports = {"icon":"achievements__icon___3YDl0","twitter":"achievements__twitter___3b6mv","facebook":"achievements__facebook___2XkqH","linkedin":"achievements__linkedin___Ljbrf","mail":"achievements__mail___jyRVW","col3":"achievements__col3___3ME7-","col2":"achievements__col2___3cqPz","halfpage":"achievements__halfpage___ilnBi","thirdpage":"achievements__thirdpage___WvGKQ","zigzag":"achievements__zigzag___3pmPx","achievements":"achievements__achievements___2I4sc"};
 
 /***/ },
 /* 100 */,
@@ -5582,13 +5554,81 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _base = __webpack_require__(96);
+
+	var _base2 = _interopRequireDefault(_base);
+
+	var _lists = __webpack_require__(75);
+
+	var _skills = __webpack_require__(102);
+
+	var _skills2 = _interopRequireDefault(_skills);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Skills = function Skills(_ref) {
+	  var title = _ref.title,
+	      _ref$skills = _ref.skills,
+	      skills = _ref$skills === undefined ? [] : _ref$skills,
+	      _ref$bulleted = _ref.bulleted,
+	      bulleted = _ref$bulleted === undefined ? true : _ref$bulleted;
+
+	  var list = skills.map(function (skill, i) {
+	    return _react2.default.createElement(
+	      _lists.ListItem,
+	      { key: i },
+	      skill
+	    );
+	  });
+
+	  return _react2.default.createElement(
+	    _base2.default,
+	    { title: title, className: _skills2.default.skills },
+	    _react2.default.createElement(
+	      _lists.UnorderedList,
+	      { style: bulleted ? ' ' : { 'list-style-type': 'none' } },
+	      list
+	    )
+	  );
+	};
+
+	Skills.propTypes = {
+	  title: _react2.default.PropTypes.string.isRequired,
+	  skills: _react2.default.PropTypes.array.isRequired,
+	  bulleted: _react2.default.PropTypes.bool
+	};
+
+	exports.default = Skills;
+
+/***/ },
+/* 102 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"icon":"skills__icon___2LV0U","twitter":"skills__twitter___3UZO-","facebook":"skills__facebook___2U-rH","linkedin":"skills__linkedin___BMe-r","mail":"skills__mail___2sAy2","col3":"skills__col3___2TpFj","col2":"skills__col2___3jzT6","halfpage":"skills__halfpage___1NEnO","thirdpage":"skills__thirdpage___2WS7h","zigzag":"skills__zigzag___2ST5r","skills":"skills__skills___2BTXP"};
+
+/***/ },
+/* 103 */,
+/* 104 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(41);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _base = __webpack_require__(96);
+
+	var _base2 = _interopRequireDefault(_base);
+
 	var _header = __webpack_require__(73);
 
 	var _header2 = _interopRequireDefault(_header);
-
-	var _section = __webpack_require__(83);
-
-	var _section2 = _interopRequireDefault(_section);
 
 	var _article = __webpack_require__(2);
 
@@ -5608,9 +5648,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _lists = __webpack_require__(75);
 
-	var _models = __webpack_require__(102);
-
-	var _experience = __webpack_require__(111);
+	var _experience = __webpack_require__(105);
 
 	var _experience2 = _interopRequireDefault(_experience);
 
@@ -5619,13 +5657,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	var listView = function listView(item, id) {
 	  return _react2.default.createElement(
 	    _lists.ListItem,
-	    null,
+	    { key: id },
 	    item
 	  );
 	};
 
 	var asideView = function asideView(title, date, description) {
-	  var cssClass = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "";
+	  var cssClass = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
 	  return _react2.default.createElement(
 	    _aside2.default,
 	    { className: cssClass },
@@ -5677,12 +5715,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	var organizationView = function organizationView(organization, i) {
 	  var title = organization.title,
 	      date = organization.date,
-	      description = organization.description;
+	      name = organization.name;
 
+	  console.log(name);
 	  return _react2.default.createElement(
 	    _article2.default,
 	    { key: i },
-	    asideView(title, date, description),
+	    asideView(title, date, name),
 	    _react2.default.createElement(
 	      _main2.default,
 	      null,
@@ -5707,39 +5746,48 @@ return /******/ (function(modules) { // webpackBootstrap
 	  );
 	};
 
+	var viewOptions = {
+	  certificationView: certificationView,
+	  employmentView: employmentView,
+	  organizationView: organizationView
+	};
+
 	var Experience = function Experience(_ref) {
 	  var title = _ref.title,
-	      children = _ref.children,
-	      className = _ref.className;
+	      children = _ref.children;
 
-	  var renderMethod = void 0;
-	  console.log(className);
-	  var cssClass = _experience2.default[className] + ' ' + _experience2.default.experience;
-	  console.log(cssClass);
+	  var renderMethod = function renderMethod() {
+	    return children[0].getClassName().toLowerCase() + 'View';
+	  };
 
-	  if (children[0].getClassName() == "Employment") renderMethod = employmentView;else if (children[0].getClassName() == "Organization") renderMethod = organizationView;else if (children[0].getClassName() == "Certification") renderMethod = certificationView;
-
-	  return _react2.default.createElement(
-	    _section2.default,
-	    { className: cssClass },
-	    _react2.default.createElement(
-	      _header2.default,
-	      { size: 2, className: [_experience2.default.zigzag] },
-	      title
-	    ),
-	    children.map(renderMethod)
-	  );
+	  try {
+	    return _react2.default.createElement(
+	      _base2.default,
+	      { title: title, className: _experience2.default.experience },
+	      children.map(viewOptions[renderMethod()])
+	    );
+	  } catch (e) {
+	    throw new Error('Experience view does not exist.');
+	  }
 	};
 
 	Experience.propTypes = {
 	  title: _react2.default.PropTypes.string.isRequired,
-	  children: _react2.default.PropTypes.arrayOf(_models.Employment)
+	  children: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.object)
 	};
 
 	exports.default = Experience;
 
 /***/ },
-/* 102 */
+/* 105 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"icon":"experience__icon___24DbL","twitter":"experience__twitter___1KasB","facebook":"experience__facebook___qSSEz","linkedin":"experience__linkedin___3b5Gu","mail":"experience__mail___81MVq","col3":"experience__col3___MZSd5","col2":"experience__col2___3aKDZ","halfpage":"experience__halfpage___QJBzg","thirdpage":"experience__thirdpage___33E9-","zigzag":"experience__zigzag___3wdxN","experience":"experience__experience___NMNIW","nocolumn":"experience__nocolumn___57ab8"};
+
+/***/ },
+/* 106 */,
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5749,15 +5797,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.Certification = exports.Organization = exports.Employment = undefined;
 
-	var _employment = __webpack_require__(103);
+	var _employment = __webpack_require__(108);
 
 	var _employment2 = _interopRequireDefault(_employment);
 
-	var _organization = __webpack_require__(109);
+	var _organization = __webpack_require__(114);
 
 	var _organization2 = _interopRequireDefault(_organization);
 
-	var _certification = __webpack_require__(110);
+	var _certification = __webpack_require__(115);
 
 	var _certification2 = _interopRequireDefault(_certification);
 
@@ -5768,7 +5816,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Certification = _certification2.default;
 
 /***/ },
-/* 103 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5777,15 +5825,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _classCallCheck2 = __webpack_require__(104);
+	var _classCallCheck2 = __webpack_require__(109);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _createClass2 = __webpack_require__(105);
+	var _createClass2 = __webpack_require__(110);
 
 	var _createClass3 = _interopRequireDefault(_createClass2);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/* eslint class-methods-use-this: ["error", { "exceptMethods": ["getClassName"] }] */
 
 	var Employment = function () {
 	  function Employment(company, city, country, start, end, title, experiences) {
@@ -5811,7 +5861,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Employment;
 
 /***/ },
-/* 104 */
+/* 109 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -5825,14 +5875,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 105 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	exports.__esModule = true;
 
-	var _defineProperty = __webpack_require__(106);
+	var _defineProperty = __webpack_require__(111);
 
 	var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -5857,23 +5907,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	}();
 
 /***/ },
-/* 106 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(107), __esModule: true };
+	module.exports = { "default": __webpack_require__(112), __esModule: true };
 
 /***/ },
-/* 107 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(108);
+	__webpack_require__(113);
 	var $Object = __webpack_require__(9).Object;
 	module.exports = function defineProperty(it, key, desc){
 	  return $Object.defineProperty(it, key, desc);
 	};
 
 /***/ },
-/* 108 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $export = __webpack_require__(7);
@@ -5881,7 +5931,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	$export($export.S + $export.F * !__webpack_require__(17), 'Object', {defineProperty: __webpack_require__(13).f});
 
 /***/ },
-/* 109 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5890,21 +5940,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _classCallCheck2 = __webpack_require__(104);
+	var _classCallCheck2 = __webpack_require__(109);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _createClass2 = __webpack_require__(105);
+	var _createClass2 = __webpack_require__(110);
 
 	var _createClass3 = _interopRequireDefault(_createClass2);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	/* eslint class-methods-use-this: ["error", { "exceptMethods": ["getClassName"] }] */
+
 	var Organization = function () {
-	  function Organization(title, organization, start, end, experiences) {
+	  function Organization(title, name, start, end, experiences) {
 	    (0, _classCallCheck3.default)(this, Organization);
 
-	    this.organization = organization;
+	    this.name = name;
 	    this.title = title;
 	    this.date = start + " - " + end;
 	    this.experiences = experiences || [];
@@ -5915,14 +5967,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function getClassName() {
 	      return Organization.name;
 	    }
-	  }, {
-	    key: "description",
-	    get: function get() {
-	      this.experiences;
-	    },
-	    set: function set(props) {
-	      this.experiences = props || [];
-	    }
 	  }]);
 	  return Organization;
 	}();
@@ -5930,7 +5974,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Organization;
 
 /***/ },
-/* 110 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5939,15 +5983,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _classCallCheck2 = __webpack_require__(104);
+	var _classCallCheck2 = __webpack_require__(109);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _createClass2 = __webpack_require__(105);
+	var _createClass2 = __webpack_require__(110);
 
 	var _createClass3 = _interopRequireDefault(_createClass2);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/* eslint class-methods-use-this: ["error", { "exceptMethods": ["getClassName"] }] */
 
 	var Certification = function () {
 	  function Certification(title, organization, start, end) {
@@ -5968,125 +6014,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	}();
 
 	exports.default = Certification;
-
-/***/ },
-/* 111 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"experience__icon___24DbL","twitter":"experience__twitter___1KasB","facebook":"experience__facebook___qSSEz","linkedin":"experience__linkedin___3b5Gu","mail":"experience__mail___81MVq","col3":"experience__col3___MZSd5","col2":"experience__col2___3aKDZ","halfpage":"experience__halfpage___QJBzg","thirdpage":"experience__thirdpage___33E9-","zigzag":"experience__zigzag___3wdxN","experience":"experience__experience___NMNIW","nocolumn":"experience__nocolumn___57ab8"};
-
-/***/ },
-/* 112 */,
-/* 113 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = deprecated;
-
-	var _warning = __webpack_require__(114);
-
-	var _warning2 = _interopRequireDefault(_warning);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var warned = {};
-
-	function deprecated(propType, explanation) {
-	  return function validate(props, propName, componentName) {
-	    // Note ...rest here
-	    if (props[propName] != null) {
-	      var message = '"' + propName + '" property of "' + componentName + '" has been deprecated.\n' + explanation;
-	      if (!warned[message]) {
-	        (0, _warning2.default)(false, message);
-	        warned[message] = true;
-	      }
-	    }
-
-	    for (var _len = arguments.length, rest = Array(_len > 3 ? _len - 3 : 0), _key = 3; _key < _len; _key++) {
-	      rest[_key - 3] = arguments[_key];
-	    }
-
-	    return propType.apply(undefined, [props, propName, componentName].concat(rest)); // and here
-	  };
-	}
-
-	function _resetWarned() {
-	  warned = {};
-	}
-
-	deprecated._resetWarned = _resetWarned;
-
-/***/ },
-/* 114 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2014-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-
-	'use strict';
-
-	/**
-	 * Similar to invariant but only logs a warning if the condition is not met.
-	 * This can be used to log issues in development environments in critical
-	 * paths. Removing the logging code for production environments will keep the
-	 * same logic and follow the same code paths.
-	 */
-
-	var warning = function() {};
-
-	if (process.env.NODE_ENV !== 'production') {
-	  warning = function(condition, format, args) {
-	    var len = arguments.length;
-	    args = new Array(len > 2 ? len - 2 : 0);
-	    for (var key = 2; key < len; key++) {
-	      args[key - 2] = arguments[key];
-	    }
-	    if (format === undefined) {
-	      throw new Error(
-	        '`warning(condition, format, ...args)` requires a warning ' +
-	        'message argument'
-	      );
-	    }
-
-	    if (format.length < 10 || (/^[s\W]*$/).test(format)) {
-	      throw new Error(
-	        'The warning format should be able to uniquely identify this ' +
-	        'warning. Please, use a more descriptive format than: ' + format
-	      );
-	    }
-
-	    if (!condition) {
-	      var argIndex = 0;
-	      var message = 'Warning: ' +
-	        format.replace(/%s/g, function() {
-	          return args[argIndex++];
-	        });
-	      if (typeof console !== 'undefined') {
-	        console.error(message);
-	      }
-	      try {
-	        // This error was thrown as a convenience so that you can use this stack
-	        // to find the callsite that caused this warning to fire.
-	        throw new Error(message);
-	      } catch(x) {}
-	    }
-	  };
-	}
-
-	module.exports = warning;
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(43)))
 
 /***/ }
 /******/ ])

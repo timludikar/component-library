@@ -1,21 +1,20 @@
 import React from 'react';
 
+import Base from '../_base';
 import Header from '../../components/header';
-import Section from '../../components/section';
 import Article from '../../components/article';
 import Paragraph from '../../components/paragraph';
 import Aside from '../../components/aside';
 import Main from '../../components/main';
 import { UnorderedList, ListItem } from '../../components/lists';
-import { Employment, Organization } from '../../models';
 
 import styles from './stylesheet/experience.styl';
 
 const listView = (item, id) => (
-  <ListItem>{item}</ListItem>
+  <ListItem key={id}>{item}</ListItem>
 );
 
-const asideView = (title, date, description, cssClass = "") => (
+const asideView = (title, date, description, cssClass = '') => (
   <Aside className={cssClass}>
     <Header size={3}>{title}</Header>
     <Paragraph>{date}</Paragraph>
@@ -24,7 +23,7 @@ const asideView = (title, date, description, cssClass = "") => (
 );
 
 const employmentView = (employment, i) => {
-  let { title, date, city, country } = employment;
+  const { title, date, city, country } = employment;
   return (
     <Article key={i}>
       { asideView(title, date, `${city}, ${country}`) }
@@ -39,10 +38,10 @@ const employmentView = (employment, i) => {
 };
 
 const organizationView = (organization, i) => {
-  let { title, date, description } = organization;
+  const { title, date, name } = organization;
   return (
     <Article key={i}>
-      { asideView(title, date, description) }
+      { asideView(title, date, name) }
       <Main>
         <UnorderedList>
           { organization.experiences.map(listView) }
@@ -53,7 +52,7 @@ const organizationView = (organization, i) => {
 };
 
 const certificationView = (certification, i) => {
-  let { title, date, organization } = certification;
+  const { title, date, organization } = certification;
   return (
     <Article key={i}>
       { asideView(organization, date, title, styles.nocolumn) }
@@ -61,31 +60,32 @@ const certificationView = (certification, i) => {
   );
 };
 
+const viewOptions = {
+  certificationView,
+  employmentView,
+  organizationView,
+};
+
 const Experience = ({
   title,
   children,
-  className,
 }) => {
-  let renderMethod;
-  console.log(className);
-  const cssClass = `${styles[className]} ${styles.experience}`;
-  console.log(cssClass);
+  const renderMethod = () => (`${children[0].getClassName().toLowerCase()}View`);
 
-  if(children[0].getClassName() == "Employment") renderMethod = employmentView;
-  else if (children[0].getClassName() == "Organization") renderMethod = organizationView;
-  else if (children[0].getClassName() == "Certification") renderMethod = certificationView;
-
-  return (
-    <Section className={cssClass}>
-      <Header size={2} className={[styles.zigzag]}>{title}</Header>
-      { children.map( renderMethod )}
-    </Section>
-  );
+  try {
+    return (
+      <Base title={title} className={styles.experience}>
+        { children.map(viewOptions[renderMethod()]) }
+      </Base>
+    );
+  } catch (e) {
+    throw new Error('Experience view does not exist.');
+  }
 };
 
 Experience.propTypes = {
   title: React.PropTypes.string.isRequired,
-  children: React.PropTypes.arrayOf(Employment),
+  children: React.PropTypes.arrayOf(React.PropTypes.object),
 };
 
 export default Experience;

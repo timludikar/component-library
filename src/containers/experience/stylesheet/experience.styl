@@ -1,7 +1,11 @@
 @import('../../../common/variables.styl');
 @import('../../../common/zigzag.styl');
 
+$base
+  @import '../../_base/stylesheet/_base.styl';
+
 .experience
+  @extend $base .base;
   h2
     text-transform: uppercase;
     font-weight: bold;

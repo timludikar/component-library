@@ -10,4 +10,4 @@ export {
   Achievements,
   Skills,
   Experience,
-}
+};

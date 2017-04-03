@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Header from '../../components/header';
-import Section from '../../components/section';
+import Base from '../_base';
 import { UnorderedList, ListItem } from '../../components/lists';
 
 import styles from './stylesheet/skills.styl';
@@ -10,26 +9,22 @@ const Skills = ({
   title,
   skills = [],
   bulleted = true,
-  className,
 }) => {
   const list = skills.map((skill, i) => <ListItem key={i}>{skill}</ListItem>);
-  const cssClass = `${styles[className]} ${styles.skills}`;
 
   return (
-    <Section className={cssClass}>
-      <Header size={2} className={[styles.zigzag]}>{title}</Header>
+    <Base title={title} className={styles.skills}>
       <UnorderedList style={bulleted ? ' ' : { 'list-style-type': 'none' }}>
         {list}
       </UnorderedList>
-    </Section>
+    </Base>
   );
 };
 
 Skills.propTypes = {
-  className: React.PropTypes.string,
   title: React.PropTypes.string.isRequired,
   skills: React.PropTypes.array.isRequired,
-  bulleted: React.PropTypes.boolean,
+  bulleted: React.PropTypes.bool,
 };
 
 export default Skills;

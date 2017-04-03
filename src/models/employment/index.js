@@ -1,3 +1,5 @@
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["getClassName"] }] */
+
 export default class Employment {
   constructor(company, city, country, start, end, title, experiences) {
     this.company = company;

@@ -1,14 +1,12 @@
-import React from 'react';
-import { render } from 'enzyme';
 import { expect } from 'chai';
 import Certification from '../index';
 
 const { describe, it } = global;
 
-const organization = "Company 1";
-const start = "2014";
-const end = "Present";
-const title = "Senior Interface Developer";
+const organization = 'Company 1';
+const start = '2014';
+const end = 'Present';
+const title = 'Senior Interface Developer';
 
 describe('Certification Model', () => {
   it('accepts company, city, country, start, end, title, experiences', () => {
@@ -20,9 +18,7 @@ describe('Certification Model', () => {
     );
 
     expect(certificationRecord.title).to.be.equal(title);
-    expect(certificationRecord.company).to.be.equal(company);
-    expect(certificationRecord.country).to.be.equal(country);
-    expect(certificationRecord.experiences).to.be.equal(experiences);
+    expect(certificationRecord.organization).to.be.equal(organization);
     expect(certificationRecord.date).to.be.equal(`${start} - ${end}`);
   });
 
@@ -35,10 +31,7 @@ describe('Certification Model', () => {
     );
 
     expect(certificationRecord.title).to.be.equal(title);
-    expect(certificationRecord.company).to.be.equal(company);
-    expect(certificationRecord.country).to.be.equal(country);
-    expect(certificationRecord.experiences).to.be.equal(experiences);
+    expect(certificationRecord.organization).to.be.equal(organization);
     expect(certificationRecord.date).to.be.equal(`${start} - 2015`);
-  })
-
+  });
 });

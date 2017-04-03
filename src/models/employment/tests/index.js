@@ -1,20 +1,18 @@
-import React from 'react';
-import { render } from 'enzyme';
 import { expect } from 'chai';
 import Employment from '../index';
 
 const { describe, it } = global;
 
-const company = "Company 1";
-const city = "Toronto";
-const country = "Canada";
-const start = "2014";
-const end = "Present";
-const title = "Senior Interface Developer";
+const company = 'Company 1';
+const city = 'Toronto';
+const country = 'Canada';
+const start = '2014';
+const end = 'Present';
+const title = 'Senior Interface Developer';
 const experiences = [
-  "Experience 1",
-  "Experience 2",
-  "Experience 3"
+  'Experience 1',
+  'Experience 2',
+  'Experience 3',
 ];
 
 describe('Employment Model', () => {
@@ -52,6 +50,5 @@ describe('Employment Model', () => {
     expect(employmentRecord.country).to.be.equal(country);
     expect(employmentRecord.experiences).to.be.equal(experiences);
     expect(employmentRecord.date).to.be.equal(`${start} - 2015`);
-  })
-
+  });
 });

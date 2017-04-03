@@ -1,11 +1,10 @@
+@import 'jeet';
 @import('../../../common/variables.styl');
 @import('../../../common/zigzag.styl');
 
-$base
-  @import '../../_base/stylesheet/_base.styl';
-
-.skills
-  @extend $base .base;
+.base
+  wrapper();
   h2
     text-transform: uppercase;
     font-weight: bold;
+    text-align: left;

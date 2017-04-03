@@ -1,15 +1,11 @@
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["getClassName"] }] */
+
 export default class Organization {
-  constructor(title, organization, start, end, experiences) {
-    this.organization = organization;
+  constructor(title, name, start, end, experiences) {
+    this.name = name;
     this.title = title;
     this.date = `${start} - ${end}`;
     this.experiences = experiences || [];
-  }
-  get description(){
-    this.experiences;
-  }
-  set description(props){
-    this.experiences = props || [];
   }
   getClassName() {
     return Organization.name;

@@ -5,7 +5,6 @@ const asideStyles = {
 
 const Aside = ({ children, style = {}, className }) => {
   const cssClass = `${className}`;
-  console.log(className);
 
   return (
     <aside
@@ -15,10 +14,10 @@ const Aside = ({ children, style = {}, className }) => {
       {children}
     </aside>
   );
-
 };
 
 Aside.propTypes = {
+  className: React.PropTypes.string.isRequired,
   children: React.PropTypes.node.isRequired,
   style: React.PropTypes.object,
 };
