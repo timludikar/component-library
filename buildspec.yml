@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing Webpack...
+      - npm install -g webpack
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+      - echo Testing source
+      - npm run test
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - webpack
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  base-directory:
+    - dist
+  files:
+    - index.js
+    - styles.css
