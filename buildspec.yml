@@ -19,7 +19,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - index.js
-    - styles.css
+    - dist*/**
   discard-paths: yes
-  base-directory: dist
